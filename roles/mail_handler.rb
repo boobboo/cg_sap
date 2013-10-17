@@ -1,6 +1,6 @@
 name "mail_handler"
 description "Mail Handler"
-runlist "recipe[chef_handler]"
+run_list "recipe[chef_handler]"
 default_attributes({
 "chef_client" => {
     "load_gems" => {
