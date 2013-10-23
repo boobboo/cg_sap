@@ -15,20 +15,6 @@ directory "#{node['SAP']['kernel_path']}" do
   recursive true
 end
 
-file "/sapmnt/PRD/exe/startsap" do
-  action :create
-  owner "root"
-  group "root"
-  mode "0755"
-end
-
-file "/sapmnt/PRD/exe/stopsap" do
-  action :create
-  owner "root"
-  group "root"
-  mode "0755"
-end
-
 remote_file "#{node['SAP']['kernel_path']}/kernel" do
   source "#{node['SAP']['url']}/kernel"
   action :create
